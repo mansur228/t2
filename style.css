@@ -8,6 +8,7 @@
 
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .box {
@@ -34,6 +35,7 @@ header {
   height: 100vh;
   width: 100%;
   background-image: url(img/header/header_bg-i.jpg);
+  background-attachment: fixed;
   background-position: right;
   background-size: cover;
   position: relative;
@@ -529,5 +531,238 @@ header .header_menu nav .header_menu_items .header_menu__title {
   letter-spacing: 2px;
   font-size: 20px;
   font-family: "Roboto Slab", serif;
+}
+
+@media screen and (max-width: 1300px) {
+  .box {
+    width: 100%;
+    max-width: 1210px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Roboto", sans-serif;
+  }
+  .title {
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #3d707a;
+  }
+  header {
+    background-color: #373B46;
+    height: 100vh;
+    width: 100%;
+    background-position: right bottom;
+    background-size: cover;
+    position: relative;
+    font-family: "Roboto Slab", serif;
+  }
+  header .header__title {
+    padding-left: 100px;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    letter-spacing: 1px;
+  }
+  header .header__title h3 {
+    font-size: 70px;
+    color: #ffffff;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  header .header__title h3:hover {
+    color: #3D707A;
+  }
+  header .header__title h4 {
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+  }
+  header .header__title .header__sub_title {
+    position: absolute;
+    font-size: 40px;
+    bottom: 0;
+    height: 41px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+    bottom: 190px;
+    left: 150px;
+  }
+  header .header_menu {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 190px;
+    height: 100vh;
+    background-color: #3d707a;
+  }
+  header .header_menu nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[6];
+        grid-template-rows: repeat(6, 1fr);
+    height: 100%;
+    width: 100%;
+  }
+  header .header_menu nav .header_menu_items {
+    border-bottom: 2px #385c63 solid;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+  }
+  header .header_menu nav .header_menu_items .header_menu_items_deployed_vertion {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #ffffff00;
+    -webkit-transition: 1s;
+    transition: 1s;
+    padding: 10px;
+  }
+  header .header_menu nav .header_menu_items .header_menu_items_deployed_vertion a {
+    margin-bottom: 4px;
+    display: block;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #fff;
+  }
+  header .header_menu nav .header_menu_items .header_menu_items_deployed_vertion.active {
+    top: 0;
+    margin-left: -100%;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    background-color: #3d707a;
+  }
+  header .header_menu nav .header_menu_items .header_menu__title {
+    background-color: #3d707a;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .plus {
+    width: 100%;
+    position: relative;
+  }
+  .plus .plus__trevels_content {
+    width: 80%;
+    background-color: #385c63;
+    margin-left: auto;
+    margin-top: 50px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .plus .plus__trevels_content:nth-child(2n) {
+    background-color: #373B46;
+    margin-left: 0;
+  }
+  .plus .plus_sport__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .plus .plus_sport__container div {
+    background-color: #385c63;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .plus .plus_sport__container div:nth-child(2n) {
+    background-color: #373B46;
+  }
+  .plus .plus__Discipline_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .plus .plus__Discipline_container .plus__Discipline_container_col {
+    max-width: 100%;
+    min-width: 0;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    background-color: #385c63;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .plus .plus__Discipline_container .plus__Discipline_container_rows div {
+    background-color: #385c63;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .plus .plus__Discipline_container .plus__Discipline_container_rows div:first-child {
+    margin: 0;
+  }
+  .plus .plus__Discipline_container .plus__Discipline_container_rows div:nth-child(2n - 1) {
+    background-color: #373B46;
+  }
+  .plus .dating__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+  }
+  .plus .dating__container .dating__container_colum {
+    background-color: #385c63;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+  }
+  .plus .dating__container .dating__container_colum:nth-child(2n) {
+    background-color: #373B46;
+  }
+  .plus .dating__container .banner {
+    background-color: #385c63;
+    padding: 10px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  .plus .dating__container .banner:first-child {
+    margin: 0;
+  }
+  .plus .dating__container .banner:nth-child(2n) {
+    background-color: #373B46;
+  }
 }
 /*# sourceMappingURL=style.css.map */
