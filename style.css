@@ -92,8 +92,7 @@ header .header_menu {
 header .header_menu nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   height: 100%;
   width: 100%;
 }
